@@ -12,16 +12,11 @@ var ms = require('./myscript.js');
 
 function createWindow () {
   // Create the browser window.
-  var wp = {
-    nodeIntegration: false
-  };
-  mainWindow = new BrowserWindow({ width: 800, height: 600, webPreferences:wp});
-
-  //mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadURL('http://www.iottech.ca/dashboard/');
-  // mainWindow.loadURL(`file://${__dirname}/index.html`)
+  // mainWindow.loadURL('http://www.iottech.ca/dashboard/');
+  mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
