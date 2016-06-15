@@ -16,4 +16,16 @@
     // You can also require other files to run in this process
     require('./renderer.js')
   </script>
+
+  <br>
+  <h1>My script</h1>
+  <script>
+    var versions = {
+      'node': process.version,
+      'electron': process.versions['electron'],
+      'chrome': process.versions['chrome']
+    };
+
+    document.write(`Node: ${versions.node} | Electron: ${versions.electron} | Chrome: ${versions.chrome}`);
+  </script>
 </html>
